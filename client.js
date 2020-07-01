@@ -19,13 +19,6 @@ const connect = function () {
   conn.on("connect", () => {
     console.log("Successfully connected to game server");
     conn.write("Name: OTB");
-    conn.write("Move: up");
-    setTimeout(() => {
-      conn.write("Move: up");
-    }, 50);
-    setInterval(() => {
-      conn.write("Move: left");
-    }, 50);
   });
 
   return conn;
